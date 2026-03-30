@@ -1,0 +1,12 @@
+{
+  "name": "appwise-katas-semana3",
+  "version": "1.0.0",
+  "description": "Katas de JS para Appwise",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --watchAll"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0"
+  }
+}
