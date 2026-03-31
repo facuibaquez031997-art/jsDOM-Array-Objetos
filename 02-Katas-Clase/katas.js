@@ -6,7 +6,7 @@
 
 // ------------------------------------------------------------
 // KATA 1 — FizzBuzz
-// Imprimí los números del 1 al 20:
+// Imprimí los números del 1 al 20
 //   - Si es múltiplo de 3 → "Fizz"
 //   - Si es múltiplo de 5 → "Buzz"
 //   - Si es múltiplo de ambos → "FizzBuzz"
@@ -17,11 +17,12 @@ console.log("--- KATA 1: FizzBuzz ---");
 
 for (let i = 1; i <= 20; i++) {
   if (i % 3 === 0 && i % 5 === 0) {
-    console.log("FizzBuzz");
+    console.log("FizzBuzz"); // imprime "FizzBuzz" si es múltiplo de ambos
   } else if (i % 3 === 0) {
-    console.log("Fizz");
+    console.log("Fizz"); // imprime "Fizz" si es múltiplo de 3
   } else if (i % 5 === 0) {
-    console.log("Buzz");
+  
+    console.log("Buzz"); // imprime "Buzz" si es múltiplo de 5
   } else {
     console.log(i);
   }
@@ -38,9 +39,9 @@ let valores = [0, 1, "", "hola", null, undefined, false, true, NaN, [], {}];
 
 valores.forEach((v) => {
   if (v) {
-    console.log(v, "→ TRUTHY");
+    console.log(v, "→ TRUTHY"); // me van a devolver los valores "hola", 1, true, [], {}. son valores verdaderos. 
   } else {
-    console.log(v, "→ falsy");
+    console.log(v, "→ falsy"); // me va a devolver los valores 0, null, undefined, false, NaN. son los valores falsos. 
   }
 });
 
@@ -63,6 +64,7 @@ for (let i = 0; i < palabra.length; i++) {
 
 console.log(`La palabra "${palabra}" tiene ${contador} vocales.`);
 
+
 // ------------------------------------------------------------
 // KATA 4 — Temperatura
 // Convertí grados Celsius a Fahrenheit: F = C * 9/5 + 32
@@ -74,7 +76,7 @@ console.log("\n--- KATA 4: Temperatura ---");
 let celsius = 22;
 let fahrenheit = (celsius * 9) / 5 + 32;
 
-console.log(`${celsius}°C equivale a ${fahrenheit}°F`);
+console.log(`${celsius}°C equivale a ${fahrenheit}°F`); // me devuelve 22°C equivale a 71.6°F // Temperatura agradable. 
 
 if (celsius < 15) {
   console.log("Hace frío 🥶");
