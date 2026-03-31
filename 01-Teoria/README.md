@@ -20,9 +20,9 @@ Una variable es un espacio en memoria con un nombre, donde guardamos informació
 > **💡 El Conserje (Garbage Collection):** En JavaScript, cuando el navegador detecta que ya no estás usando una variable (una caja), pasa el "Garbage Collector" (el conserje) y limpia ese pedacito de RAM automáticamente para que tu PC no explote.
 
 ```js
-let nombre = "Ana";
-const PI = 3.14;
-var edad = 25;
+let nombre = "Ana"; //string
+const PI = 3.14; // float
+var edad = 25; //number tipo entero
 ```
 
 ### `let` vs `const` vs `var`
@@ -221,7 +221,14 @@ for (let i = 0; i < 5; i++) {
 ## 🙋‍♂️ Preguntas para cerrar la clase
 
 1. ¿Cuál es la diferencia entre `let` y `const`?
+"let" arroja bugs silenciosos y se recomienta utilizar el let. El "const" se usa cuando el dato que le agregamos sabemos que no va a ser necesario cambiarlo. 
 2. ¿Qué es el Hoisting y por qué hace que usar `var` sea peligroso?
+El Hoisting es la capacidad quw tiene JavaScript para obtener en un pre-escaneo de el codigo todas las variables y las funciones y elevarlas a la memoria
+y no se usa "Var" porque genera bugs silenciosos y arroja undefined en consola. 
 3. ¿Qué es un valor `falsy`? Dame 3 ejemplos.
+"falsy" son valores que se comportan para JavaScript como si fuesen falsos. "", false, undefined.
 4. ¿Por qué preferimos el triple igual `===` sobre el doble igual `==`?
+El === es mejor porque compara tipo y valor entonces aunque comparemos 5 === "5" nos arrojara false, en cambio usar == solo compara el valor pero no el tipo entonces
+hacer 5 == "5"  retorna true porque no son iguales pero son parecidos. 
 5. ¿Qué pasa si olvidamos el `break` en un `switch` o el `contador++` en un `while`?
+Se genera un bucle infinito y rompe el navegador en algún momento. 
