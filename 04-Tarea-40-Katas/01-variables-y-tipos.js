@@ -10,7 +10,9 @@
 -------------------------------------------------------------------------- */
 function sumar(a, b) {
   // TU CÓDIGO AQUÍ 👇
+  return a +b;
 }
+sumar();
 
 /* --------------------------------------------------------------------------
    KATA 2 — La Resta
@@ -18,7 +20,9 @@ function sumar(a, b) {
 -------------------------------------------------------------------------- */
 function restar(a, b) {
   // TU CÓDIGO AQUÍ 👇
-}
+  return a - b;
+};
+restar();
 
 /* --------------------------------------------------------------------------
    KATA 3 — Concatenación de Nombre
@@ -27,7 +31,9 @@ function restar(a, b) {
 -------------------------------------------------------------------------- */
 function unirNombre(nombre, apellido) {
   // TU CÓDIGO AQUÍ 👇
-}
+  return `${nombre} ${apellido}`;
+};
+unirNombre();
 
 /* --------------------------------------------------------------------------
    KATA 4 — Saludo con Template Literal
@@ -36,7 +42,9 @@ function unirNombre(nombre, apellido) {
 -------------------------------------------------------------------------- */
 function crearSaludo(nombre, edad) {
   // TU CÓDIGO AQUÍ 👇
+  return `Hola, soy ${nombre} y tengo ${edad} años.`;
 }
+crearSaludo();
 
 /* --------------------------------------------------------------------------
    KATA 5 — El Detective de Tipos
@@ -44,7 +52,9 @@ function crearSaludo(nombre, edad) {
 -------------------------------------------------------------------------- */
 function detectarTipo(valor) {
   // TU CÓDIGO AQUÍ 👇
-}
+  return typeof valor;
+};
+detectarTipo();
 
 /* --------------------------------------------------------------------------
    KATA 6 — Conversión de Tipo
@@ -53,7 +63,9 @@ function detectarTipo(valor) {
 -------------------------------------------------------------------------- */
 function convertirANumero(str) {
   // TU CÓDIGO AQUÍ 👇
-}
+ return Number(str);
+};
+convertirANumero();
 
 /* --------------------------------------------------------------------------
    KATA 7 — Longitud del String
@@ -61,7 +73,9 @@ function convertirANumero(str) {
 -------------------------------------------------------------------------- */
 function calcularLongitud(str) {
   // TU CÓDIGO AQUÍ 👇
-}
+  return str.length;
+};
+calcularLongitud();
 
 /* --------------------------------------------------------------------------
    KATA 8 — Todo en Mayúsculas
@@ -69,7 +83,9 @@ function calcularLongitud(str) {
 -------------------------------------------------------------------------- */
 function aMayusculas(str) {
   // TU CÓDIGO AQUÍ 👇
+  return str.toUpperCase();
 }
+aMayusculas();
 
 /* --------------------------------------------------------------------------
    KATA 9 — Área del Círculo
@@ -79,7 +95,10 @@ function aMayusculas(str) {
 -------------------------------------------------------------------------- */
 function calcularAreaCirculo(radio) {
   // TU CÓDIGO AQUÍ 👇
+  const area = Math.PI * radio * radio;
+  return Math.round(area*100)/100;
 }
+calcularAreaCirculo();
 
 /* --------------------------------------------------------------------------
    KATA 10 — Verificar NaN
@@ -88,7 +107,9 @@ function calcularAreaCirculo(radio) {
 -------------------------------------------------------------------------- */
 function verificarNaN(valor) {
   // TU CÓDIGO AQUÍ 👇
-}
+ return isNaN(valor);
+};
+verificarNaN();
 
 // 🚨 ¡NO TOCAR ESTA LÍNEA! Necesaria para los tests.
 module.exports = {
