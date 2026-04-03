@@ -10,7 +10,15 @@
 -------------------------------------------------------------------------- */
 function signoNumero(numero) {
   // TU CÓDIGO AQUÍ 👇
-}
+  if (numero > 0) {
+    return "positivo";
+  } else if (numero < 0) {
+    return "negativo";
+  } else if (numero === 0) {
+    return "cero";
+  };
+};
+
 
 /* --------------------------------------------------------------------------
    KATA 12 — Año Bisiesto
@@ -20,7 +28,8 @@ function signoNumero(numero) {
 -------------------------------------------------------------------------- */
 function esBisiesto(anio) {
   // TU CÓDIGO AQUÍ 👇
-}
+  return (anio % 4 === 0 && anio % 100 !==0 || anio % 400 === 0) 
+ };
 
 /* --------------------------------------------------------------------------
    KATA 13 — Tipo de Día
@@ -29,7 +38,26 @@ function esBisiesto(anio) {
 -------------------------------------------------------------------------- */
 function tipoDia(dia) {
   // TU CÓDIGO AQUÍ 👇
-}
+  switch (dia) {
+    case "lunes":
+      return "laborable";
+      break;
+    case "martes":
+      return "laborable";
+      break;
+    case "miercoles":
+      return "laborable";
+      break;
+    case "jueves":
+      return "laborable";
+      break;
+    case "viernes":
+      return "laborable";
+      break;
+    default: 
+      return "fin de semana";
+  };
+};
 
 /* --------------------------------------------------------------------------
    KATA 14 — Precio de Entrada al Cine
@@ -40,7 +68,15 @@ function tipoDia(dia) {
 -------------------------------------------------------------------------- */
 function precioEntrada(edad) {
   // TU CÓDIGO AQUÍ 👇
-}
+  if (edad < 12) {
+    return 500;
+  } else if (edad <= 64) {
+    return 1200;
+  } else if (edad >= 65) {
+    return 700;
+  };
+};
+
 
 /* --------------------------------------------------------------------------
    KATA 15 — ¿Tiene Contenido?
@@ -49,7 +85,8 @@ function precioEntrada(edad) {
 -------------------------------------------------------------------------- */
 function tieneContenido(texto) {
   // TU CÓDIGO AQUÍ 👇
-}
+  return texto.length > 0 ? "Tiene contenido" : "Vacío";
+};
 
 /* --------------------------------------------------------------------------
    KATA 16 — ¿Puede Conducir?
@@ -60,7 +97,16 @@ function tieneContenido(texto) {
 -------------------------------------------------------------------------- */
 function puedeConducir(edad, aproboTeorico) {
   // TU CÓDIGO AQUÍ 👇
-}
+  if (edad >= 18 && aproboTeorico) {
+    return "Puede sacar el registro";
+
+  } else if (edad >= 18 && !aproboTeorico) {
+    return "Sin teórico aprobado";
+
+  } else if (edad < 18) {
+    return "Menor de edad";
+  };
+};
 
 /* --------------------------------------------------------------------------
    KATA 17 — Número a Día de la Semana
@@ -70,7 +116,32 @@ function puedeConducir(edad, aproboTeorico) {
 -------------------------------------------------------------------------- */
 function numeroDia(numero) {
   // TU CÓDIGO AQUÍ 👇
-}
+  switch (numero) {
+    case 1: 
+     return "lunes";
+     break;
+    case 2: 
+     return "martes";
+     break;
+    case 3:
+     return "miércoles";
+     break;
+    case 4:
+      return "jueves";
+      break;
+    case 5:
+      return "viernes";
+      break;
+    case 6:
+      return "sábado";
+      break;
+    case 7:
+      return "domingo";
+      break;
+    default:
+      return "Día inválido";        
+  };
+};
 
 /* --------------------------------------------------------------------------
    KATA 18 — Clasificar IMC
@@ -82,7 +153,18 @@ function numeroDia(numero) {
 -------------------------------------------------------------------------- */
 function clasificarIMC(peso, altura) {
   // TU CÓDIGO AQUÍ 👇
-}
+  const imc = peso / (altura * altura);
+
+  if (imc <= 18.5) {
+  return "Bajo peso";
+ } else if (imc <= 24.9) {
+  return "Normal";
+ } else if (imc <= 29.9) {
+  return "Sobrepeso";
+ } else if (imc >= 30) {
+  return "Obesidad";
+ };
+};
 
 /* --------------------------------------------------------------------------
    KATA 19 — Valor por Defecto
@@ -91,7 +173,12 @@ function clasificarIMC(peso, altura) {
 -------------------------------------------------------------------------- */
 function valorPorDefecto(nombreUsuario) {
   // TU CÓDIGO AQUÍ 👇
-}
+  if (nombreUsuario === null || nombreUsuario === undefined || nombreUsuario === "") {
+    return "Anónimo";
+  } else {
+    return nombreUsuario;
+  };
+};
 
 /* --------------------------------------------------------------------------
    KATA 20 — Sistema de Notas
@@ -103,7 +190,16 @@ function valorPorDefecto(nombreUsuario) {
 -------------------------------------------------------------------------- */
 function calificarNota(nota) {
   // TU CÓDIGO AQUÍ 👇
-}
+  if (nota <= 59) {
+    return "Reprobado";
+  } else if (nota <= 74) {
+    return "Aprobado";
+  } else if (nota <= 89) {
+    return "Notable";
+  } else if (nota <= 100) {
+    return "Sobresaliente";
+  };
+};
 
 // 🚨 ¡NO TOCAR ESTA LÍNEA!
 module.exports = {
