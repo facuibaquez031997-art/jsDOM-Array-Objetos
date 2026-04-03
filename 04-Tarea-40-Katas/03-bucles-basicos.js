@@ -11,7 +11,14 @@
 -------------------------------------------------------------------------- */
 function numerosHastaN(n) {
   // TU CÓDIGO AQUÍ 👇
+  const resultado = [];
+
+for (let i = 1; i <= n; i++) {
+  resultado.push(i);
 }
+
+return resultado;
+};
 
 /* --------------------------------------------------------------------------
    KATA 22 — Cuenta Regresiva
@@ -21,6 +28,13 @@ function numerosHastaN(n) {
 -------------------------------------------------------------------------- */
 function cuentaRegresiva(inicio) {
   // TU CÓDIGO AQUÍ 👇
+  const resultado = [];
+
+  for (let i = inicio; i >= 0; i--) {
+    resultado.push(i);
+  };
+  resultado.push("¡Despegue! 🚀")
+  return resultado;
 }
 
 /* --------------------------------------------------------------------------
@@ -30,6 +44,11 @@ function cuentaRegresiva(inicio) {
 -------------------------------------------------------------------------- */
 function tablaMultiplicar(numero) {
   // TU CÓDIGO AQUÍ 👇
+  const resultados = [];
+  for (let i = 1; i <= 10; i++){
+    resultados.push(`${numero} x ${i} = ${numero * i}`);
+  };
+  return resultados;
 }
 
 /* --------------------------------------------------------------------------
@@ -40,6 +59,10 @@ function tablaMultiplicar(numero) {
 -------------------------------------------------------------------------- */
 function factorial(n) {
   // TU CÓDIGO AQUÍ 👇
+  let resultado = 1;
+  for (let i = 1; i <= n; i++){
+    resultado *= i;
+  } return resultado;   
 }
 
 /* --------------------------------------------------------------------------
@@ -49,8 +72,15 @@ function factorial(n) {
    Ej: sinMultiplosDe4(8) → [1, 2, 3, 5, 6, 7]
 -------------------------------------------------------------------------- */
 function sinMultiplosDe4(limite) {
-  // TU CÓDIGO AQUÍ 👇
-}
+  // TU CÓDIGO AQUÍ 👇  
+  const resultado = [];
+  for (let i = 1; i <= limite; i++){
+    if (i % 4 !== 0){
+      resultado.push(i);
+    }
+  } 
+  return resultado;
+};
 
 /* --------------------------------------------------------------------------
    KATA 26 — Primer Múltiplo de 13 Mayor a 100
@@ -59,6 +89,11 @@ function sinMultiplosDe4(limite) {
 -------------------------------------------------------------------------- */
 function primerMultiploDe13MayorA100() {
   // TU CÓDIGO AQUÍ 👇
+  let numero = 101;
+  while (numero % 13 !== 0) {
+    numero++;
+  }
+  return numero;
 }
 
 /* --------------------------------------------------------------------------
@@ -68,7 +103,12 @@ function primerMultiploDe13MayorA100() {
 -------------------------------------------------------------------------- */
 function triangulo(filas) {
   // TU CÓDIGO AQUÍ 👇
-}
+  const resultado = [];
+  for(let i = 1; i <= filas; i++){
+    resultado.push("*".repeat(i));
+  };  
+  return resultado;
+  };
 
 /* --------------------------------------------------------------------------
    KATA 28 — Suma del 1 al N
@@ -77,6 +117,11 @@ function triangulo(filas) {
 -------------------------------------------------------------------------- */
 function sumaHastaN(n) {
   // TU CÓDIGO AQUÍ 👇
+  let suma = 0;
+  for (let i = 1; i <= n; i++){
+    suma += i;
+  }
+  return suma;
 }
 
 /* --------------------------------------------------------------------------
@@ -87,6 +132,17 @@ function sumaHastaN(n) {
 -------------------------------------------------------------------------- */
 function fibonacci(n) {
   // TU CÓDIGO AQUÍ 👇
+  const resultado = [];
+  for (let i = 0; i < n; i++){
+    if (i === 0){
+      resultado.push(0);
+    } else if (i === 1){
+      resultado.push(1);
+    } else {
+      resultado.push(resultado[i - 1] + resultado[i - 2]);
+    };
+  };
+  return resultado;
 }
 
 /* --------------------------------------------------------------------------
@@ -97,6 +153,12 @@ function fibonacci(n) {
 -------------------------------------------------------------------------- */
 function esPrimo(numero) {
   // TU CÓDIGO AQUÍ 👇
+ for (let i = 2; i < numero; i++){
+    if (numero % i === 0){
+      return false;
+    }
+  }
+  return numero > 1;
 }
 
 // 🚨 ¡NO TOCAR ESTA LÍNEA!
