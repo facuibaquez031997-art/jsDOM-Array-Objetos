@@ -19,7 +19,23 @@
 -------------------------------------------------------------------------- */
 function fizzBuzzExtendido(n) {
   // TU CÓDIGO AQUÍ 👇
-}
+  if (n % 3 === 0 && n % 5 === 0 && n % 7 === 0) {
+    return "FizzBuzzBazz";
+  } else if (n % 5 === 0 && n % 7 === 0) {
+    return "BuzzBazz";
+  } else if (n % 3 === 0 && n % 7 === 0) {
+    return "FizzBazz";
+  } else if (n % 3 === 0 && n % 5 === 0) {
+    return "FizzBuzz";
+  } else if (n % 7 === 0) {
+    return "Bazz";
+  } else if (n % 5 === 0) {
+    return "Buzz";
+  } else if (n % 3 === 0) {
+    return "Fizz";
+  };
+  return String(n);
+};
 
 /* --------------------------------------------------------------------------
    KATA 32 — Descuento en Carrito
@@ -28,9 +44,18 @@ function fizzBuzzExtendido(n) {
    Retorná el precio final a pagar.
 -------------------------------------------------------------------------- */
 function calcularTotal(precios) {
-  // TU CÓDIGO AQUÍ 👇
-}
+  let total = 0;
 
+  for (let i = 0; i < precios.length; i++) {
+    total += precios[i];
+  }
+
+  if (total > 5000) {
+    total = total * 0.85;
+  }
+
+  return total;
+}
 /* --------------------------------------------------------------------------
    KATA 33 — Contador de Pares e Impares
    Dado un límite, contá cuántos pares e impares hay del 1 al límite.
@@ -38,9 +63,19 @@ function calcularTotal(precios) {
    Ej: contarParesEImpares(6) → { pares: 3, impares: 3 }
 -------------------------------------------------------------------------- */
 function contarParesEImpares(limite) {
-  // TU CÓDIGO AQUÍ 👇
-}
+  let pares = 0;
+  let impares = 0;
 
+  for (let i = 1; i <= limite; i++) {
+    if (i % 2 === 0) {
+      pares++;
+    } else {
+      impares++;
+    }
+  }
+
+  return { pares, impares };
+}
 /* --------------------------------------------------------------------------
    KATA 34 — Palabras en Mayúsculas
    Dado un string con varias palabras, dividílo por espacios y retorná
@@ -48,7 +83,14 @@ function contarParesEImpares(limite) {
    Ej: palabrasEnMayusculas("hola mundo") → ["HOLA", "MUNDO"]
 -------------------------------------------------------------------------- */
 function palabrasEnMayusculas(oracion) {
-  // TU CÓDIGO AQUÍ 👇
+  const palabras = oracion.split(" ");
+  const resultado = [];
+
+  for (let i = 0; i < palabras.length; i++) {
+    resultado.push(palabras[i].toUpperCase());
+  }
+
+  return resultado;
 }
 
 /* --------------------------------------------------------------------------
@@ -59,9 +101,11 @@ function palabrasEnMayusculas(oracion) {
    Ej: clasificarNumero(8) → { esPar: true, mayorQueCinco: true }
 -------------------------------------------------------------------------- */
 function clasificarNumero(numero) {
-  // TU CÓDIGO AQUÍ 👇
+  return {
+    esPar: numero % 2 === 0,
+    mayorQueCinco: numero > 5
+  };
 }
-
 /* --------------------------------------------------------------------------
    KATA 36 — Divisibles por 3 pero no por 9
    Dado un límite, retorná un array con todos los números del 1 al límite
@@ -70,7 +114,15 @@ function clasificarNumero(numero) {
 -------------------------------------------------------------------------- */
 function divisiblesPor3NoNueve(limite) {
   // TU CÓDIGO AQUÍ 👇
-}
+  const resultado = [];
+
+  for (let i = 1; i <= limite; i++) {
+    if (i % 3=== 0 && i % 9 !== 0) {
+      resultado.push(i);
+    };
+  };
+  return resultado;
+};
 
 /* --------------------------------------------------------------------------
    KATA 37 — Conversión de Temperatura
@@ -80,9 +132,14 @@ function divisiblesPor3NoNueve(limite) {
    Ej: convertirTemperatura(100) → { fahrenheit: 212, kelvin: 373.15 }
 -------------------------------------------------------------------------- */
 function convertirTemperatura(celsius) {
-  // TU CÓDIGO AQUÍ 👇
-}
+  const fahrenheit = Math.round((celsius * 9/5 + 32) * 100) / 100;
+  const kelvin = celsius + 273.15;
 
+  return {
+    fahrenheit,
+    kelvin
+  };
+}
 /* --------------------------------------------------------------------------
    KATA 38 — Contar Tiradas de Dado
    Dado un array de tiradas (números del 1 al 6), retorná un objeto
@@ -91,6 +148,22 @@ function convertirTemperatura(celsius) {
 -------------------------------------------------------------------------- */
 function contarTiradas(tiradas) {
   // TU CÓDIGO AQUÍ 👇
+  const resultado = {
+    1: 0,
+    2: 0,
+    3: 0,
+    4: 0,
+    5: 0,
+    6: 0
+  };
+
+  for (const tirada of tiradas) {
+    if (resultado.hasOwnProperty(tirada)) {
+      resultado[tirada]++;
+    }
+  }
+
+  return resultado;
 }
 
 /* --------------------------------------------------------------------------
@@ -101,6 +174,14 @@ function contarTiradas(tiradas) {
 -------------------------------------------------------------------------- */
 function obtenerDivisores(numero) {
   // TU CÓDIGO AQUÍ 👇
+  const divisores = [];
+
+  for (let i = 1; i <= numero; i++) {
+    if (numero % i === 0) {
+      divisores.push(i);
+    }
+  } 
+  return divisores;
 }
 
 /* --------------------------------------------------------------------------
@@ -114,6 +195,19 @@ function obtenerDivisores(numero) {
 -------------------------------------------------------------------------- */
 function adivinarNumero(secreto, intentos) {
   // TU CÓDIGO AQUÍ 👇
+  const resultados = [];
+
+  for (const intento of intentos) {
+    if (intento < secreto) {
+      resultados.push("Demasiado bajo");
+    } else if (intento > secreto) {
+      resultados.push("Demasiado alto");
+    } else {
+      resultados.push("¡Correcto!");
+    }
+  }
+
+  return resultados;
 }
 
 // 🚨 ¡NO TOCAR ESTA LÍNEA!
